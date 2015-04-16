@@ -56,12 +56,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# If there are changes to commit, display a marker.
+check_git_status() {
+    git status 2> /dev/null | grep modified | sed -e 's/.*/*/'
+}
+
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git~\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git~\1/'
+}
+
+git_closing_paren() {
+    git branch 2> /dev/null | sed -e 's/.*/)/'
 }
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;31m\]\w \[\033[01;34m\]$(parse_git_branch)\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;31m\]\w \[\033[01;34m\]$(parse_git_branch)\[\033[01;91m\]$(check_git_status)\[\033[01;34m\]$(git_closing_paren)\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
