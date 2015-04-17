@@ -58,7 +58,7 @@ fi
 
 # If there are changes to commit, display a marker.
 check_git_status() {
-    git status 2> /dev/null | grep "[modified|new]" | head -n 1 | sed -e 's/.*/*/'
+    git status 2> /dev/null | grep "modified\|new" | head -n 1 | sed -e 's/.*/*/'
 }
 
 git_commit_ready() {
