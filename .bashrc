@@ -4,6 +4,17 @@ case $- in
       *) return;;
 esac
 
+# Export powerline path
+#if [ -d "$HOME/.local/bin" ]; then
+#    PATH="$HOME/.local/bin:$PATH"
+#fi
+
+# Show powerline
+#if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#fi
+
+
 # Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
