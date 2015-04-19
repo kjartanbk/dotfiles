@@ -26,3 +26,4 @@ let g:indent_guides_guide_size = 1
 
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/python.vim
+source ~/.vim/startup/syntax_hl.vim
