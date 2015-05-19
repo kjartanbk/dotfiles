@@ -4,16 +4,6 @@ case $- in
       *) return;;
 esac
 
-# Export powerline path
-#if [ -d "$HOME/.local/bin" ]; then
-#    PATH="$HOME/.local/bin:$PATH"
-#fi
-
-# Show powerline
-#if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-#fi
-
 
 # Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -79,7 +69,7 @@ parse_git_branch() {
 
 # Closing parenthesis for git display (to make warning markers appear inside parentheses).
 git_closing_paren() {
-    git branch 2> /dev/null | sed -e 's/.*/)/'
+    git branch 2> /dev/null | head -n 1 | sed -e 's/.*/)/'
 }
 
 if [ "$color_prompt" = yes ]; then
@@ -114,6 +104,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias compiler='cd ~/skoli/p4/tda283/TDA283/'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

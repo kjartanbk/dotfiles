@@ -17,7 +17,6 @@ vno <right> <Nop>
 vno <up> <Nop>
 
 " Tab movement
-nmap <C-x> :tabnext<CR>
 map <C-Tab> :tabnext<CR>
 imap <C-x> <ESC>:tabnext<CR>
 
@@ -39,3 +38,9 @@ nmap g<C-O> o<ESC>k
 
 " g + O to create new line above cursor
 nmap gO O<ESC>j
+
+" Quickly move between splits
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
