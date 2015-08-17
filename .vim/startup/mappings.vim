@@ -1,4 +1,3 @@
-" Unmap arrow keys
 
 no ; :
 
@@ -18,7 +17,7 @@ vno <up> <Nop>
 
 " Tab movement
 map <C-Tab> :tabnext<CR>
-imap <C-x> <ESC>:tabnext<CR>
+"imap <C-x> <ESC>:tabnext<CR>
 
 " Auto center
 nmap G Gzz
@@ -44,3 +43,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+" Exit insert mode 
+inoremap jk <ESC>

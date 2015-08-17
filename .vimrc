@@ -10,7 +10,6 @@ set nocompatible     " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256
-"let g:Powerline_symbols = 'fancy'
 colo skittles_berry
 
 set tabstop=4
@@ -20,9 +19,11 @@ set number
 set relativenumber
 set cursorline
 set ruler
+set wildignore=*.hi,*.o
 
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
+let g:EasyMotion_leader_key = '<Leader>' 
 
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/python.vim
