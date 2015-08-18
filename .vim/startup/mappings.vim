@@ -31,6 +31,14 @@ imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
+imap <leader>{ {}<ESC>i
+
+" Wrap word under cursor
+no <leader>' viw<ESC>a'<ESC>bi'<ESC>el
+no <leader>" viw<ESC>a"<ESC>bi"<ESC>el
+no <leader>( viw<ESC>a)<ESC>bi(<ESC>el
+no <leader>[ viw<ESC>a]<ESC>bi[<ESC>el
+no <leader>{ viw<ESC>a}<ESC>bi{<ESC>el
 
 " g + Ctrl-O to create new line below cursor
 nmap g<C-O> o<ESC>k
