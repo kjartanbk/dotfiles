@@ -105,6 +105,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias compiler='cd ~/skoli/p4/tda283/TDA283/'
+alias functional='cd ~/skoli/p6/tda452/'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -132,3 +133,8 @@ fi
 
 #alias tmux="tmux -2"
 #export TERM="xterm-256color"
+
+# Export go language path
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/forritun/go
+export GOBIN=$GOPATH/bin
