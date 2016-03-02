@@ -4,5 +4,8 @@
 #
 # A script for displaying the temperature of both processor cores in a dual-core system.
 # Can easily be extended for four cores or reduced to one core display.
+# Intended for use with i3blocks.
+#
+# TODO: Custom colors if temp gets too high.
 
 sensors | grep "Core" | awk '{temp[NR]=$3}END{printf "C1: %s C2: %s\n", temp[1], temp[2]}' | sed s/\+//g

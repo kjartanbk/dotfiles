@@ -1,9 +1,11 @@
 #!/bin/bash
 #
 # Author: Kjartan B. Kristjansson
+#
 # A script that outputs the status and charge of the laptop battery.
 # It will proably not work on other machines unless they have the
 # same battery configuration.
+# Intended for use with i3blocks.
 
 # Directory of battery data files.
 batt_dir='/sys/class/power_supply/BAT1'

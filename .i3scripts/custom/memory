@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Author: Kjartan B. Kristjansson
+#
+# This is a script that displays the percentage of RAM which is currently in use.
+# It is inspired by Julien Bonjean's original battery script,
+# located in ../ .
+# Intended for use with i3blocks.
+
+awk '
+/^MemFree:/{free=$2}
+/^MemTotal:/{total=$2}
+/^Cached:/{free+=$2}
+END{
+  percent=(total-free)/total*100
+  printf "%d %\n\n", percent
+  if(percent > 80) {
+    printf "#FF0000"
+  } else if(percent > 70) {
+    printf "#FF6600"
+  } else if(percent > 60) {
+    printf "#FFFF00"
+  }
+}
+' /proc/meminfo

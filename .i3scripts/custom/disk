@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Author: Kjartan B. Kristjansson
+#
+# This is a script that shows the free space currently available at '/'.
+# Intended for use with i3blocks.
+#
+# TODO: Output a warning if the free space drops below a certain threshold. 
+
+# The mount name of / in /dev/.
+main_name="sda1"
+df -h | grep $main_name | awk '{printf "%d GiB\n", $4}'
