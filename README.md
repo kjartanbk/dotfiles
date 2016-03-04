@@ -17,9 +17,9 @@ The following packages are used in the *i3* config:
 
 The *i3* setup also uses the *Font-Awesome* and *Yosemite San Fransisco Font* fonts, located in the **fonts** folder.
 
-The github repository for *Font-Awesome* can be found [here][2].
+The GitHub repository for *Font-Awesome* can be found [here][2].
 
-The github repository for *Yosemite San Fransisco Font* can be found [here][3].
+The GitHub repository for *Yosemite San Fransisco Font* can be found [here][3].
 
 [1]: https://github.com/acrisci/playerctl/releases
 [2]: https://github.com/FortAwesome/Font-Awesome
