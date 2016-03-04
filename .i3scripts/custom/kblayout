@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Author: Kjartan B. Kristjansson
+#
+# This script outputs the current keyboard layout.
+
+setxkbmap -print | grep -o 'pc+.*+' | awk -F '+' '{print toupper($2)}'

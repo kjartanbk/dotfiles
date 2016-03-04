@@ -70,7 +70,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "1 "
-set $workspace10 "10 "
+set $workspace10 "10 "
 
 # Switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -178,12 +178,12 @@ bar {
 }
 
 # Shortcuts for fast switching of keyboard layouts. 
-bindsym Mod1+e exec setxkbmap us
-bindsym Mod1+i exec setxkbmap is
-bindsym Mod1+s exec setxkbmap se
-bindsym Mod1+r exec setxkbmap ru
-bindsym Mod1+1 exec setxkbmap us
-bindsym Mod1+2 exec setxkbmap is
+bindsym Mod1+e exec setxkbmap us && pkill -RTMIN+10 i3blocks
+bindsym Mod1+i exec setxkbmap is && pkill -RTMIN+10 i3blocks
+bindsym Mod1+s exec setxkbmap se && pkill -RTMIN+10 i3blocks
+bindsym Mod1+r exec setxkbmap ru && pkill -RTMIN+10 i3blocks
+bindsym Mod1+1 exec setxkbmap us && pkill -RTMIN+10 i3blocks
+bindsym Mod1+2 exec setxkbmap is && pkill -RTMIN+10 i3blocks
 
 # Lock screen with Alt+l
 bindsym Mod1+l exec i3lock -c 000000
@@ -206,6 +206,3 @@ exec feh --bg-scale /home/tan1/Pictures/Dettifoss.jpg
 exec xautolock -time 10 -locker "i3lock -c 000000"
 exec --no-startup-id nm-applet
 exec --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1"
-
-# Remap caps-lock to escape.
-setxkbmap -option caps:escape
