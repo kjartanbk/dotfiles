@@ -34,7 +34,7 @@ elif [ "$stat" == "Full" ]; then
     echo
     echo \#00FF00
 else
-    echo "CHR $charge %"
+    echo " $charge %"
     echo
     echo \#00FF00
 fi
